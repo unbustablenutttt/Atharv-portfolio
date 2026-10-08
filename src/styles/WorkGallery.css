@@ -1,0 +1,401 @@
+/* ============================================================
+   WORK GALLERY COMPONENT STYLES
+   Authentic Instagram Aspect Ratios & Clean Editorial Grid
+   ============================================================ */
+
+.work {
+  background: var(--ink);
+  padding: var(--space-2xl) 0;
+}
+
+.work__header {
+  padding: 0 var(--space-xl) var(--space-xl);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(238, 229, 213, 0.07);
+  margin-bottom: var(--space-xl);
+}
+
+.work__title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.work__label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--burnt);
+}
+
+.work__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--ivory);
+}
+
+/* Filter Buttons */
+.work__filters {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.work__filter-btn {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border: 1px solid rgba(238, 229, 213, 0.15);
+  background: transparent;
+  color: rgba(238, 229, 213, 0.5);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.work__filter-btn:hover {
+  border-color: rgba(198, 90, 46, 0.4);
+  color: var(--ivory);
+}
+
+.work__filter-btn--active {
+  background: var(--burnt);
+  border-color: var(--burnt);
+  color: var(--ink);
+}
+
+/* ============================================================
+   GRID — Clean, Balanced Instagram-Optimized Editorial Grid
+   ============================================================ */
+
+.work__grid {
+  padding: 0 var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Work Card Container */
+.work-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--smoke);
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  border: 1px solid rgba(238, 229, 213, 0.07);
+  transition: transform var(--transition-med), border-color var(--transition-med), box-shadow var(--transition-med);
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(198, 90, 46, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================================
+   IMAGE WRAPPER — Default Instagram Aspect Ratios
+   Default feed post is 4:5 portrait (1080x1350)
+   ============================================================ */
+
+.work-card__image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5; /* Default Instagram post ratio */
+  overflow: hidden;
+  background: #140e0c;
+}
+
+/* Landscape posts (like 16:9 film and widescreen reels) */
+.work-card--landscape .work-card__image-wrap {
+  aspect-ratio: 16 / 9;
+}
+
+/* Vertical reels (9:16) */
+.work-card--vertical .work-card__image-wrap {
+  aspect-ratio: 4 / 5;
+}
+
+.work-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 700ms var(--ease-out-expo);
+  will-change: transform;
+}
+
+.work-card:hover .work-card__image {
+  transform: scale(1.04);
+}
+
+/* Top Badges Row */
+.work-card__badge-row {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.work-card__type-badge {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  background: rgba(23, 17, 15, 0.82);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(198, 90, 46, 0.4);
+  color: var(--burnt);
+  border-radius: 2px;
+}
+
+.work-card__ig-pill {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  padding: 4px 7px;
+  background: rgba(23, 17, 15, 0.82);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(238, 229, 213, 0.2);
+  color: rgba(238, 229, 213, 0.7);
+  border-radius: 2px;
+}
+
+.work-card__pin-pill {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  padding: 4px 7px;
+  background: rgba(180, 33, 44, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(238, 229, 213, 0.3);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Play indicator for reels/films */
+.work-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border: 1.5px solid rgba(238, 229, 213, 0.6);
+  background: rgba(23, 17, 15, 0.35);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  transition: opacity var(--transition-med), transform var(--transition-med), background var(--transition-med);
+  z-index: 3;
+}
+
+.work-card__play-triangle {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 14px solid var(--ivory);
+  margin-left: 3px;
+}
+
+.work-card:hover .work-card__play {
+  opacity: 1;
+  background: rgba(198, 90, 46, 0.7);
+  border-color: var(--ivory);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* Hover overlay */
+.work-card__hover {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(23, 17, 15, 0.95) 0%,
+    rgba(23, 17, 15, 0.5) 50%,
+    rgba(23, 17, 15, 0.15) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-med);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  z-index: 4;
+}
+
+.work-card:hover .work-card__hover {
+  opacity: 1;
+}
+
+.work-card__hover-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--ivory);
+  line-height: 1.15;
+  transform: translateY(6px);
+  transition: transform var(--transition-med);
+}
+
+.work-card:hover .work-card__hover-title {
+  transform: translateY(0);
+}
+
+.work-card__hover-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.4rem;
+  transform: translateY(6px);
+  transition: transform var(--transition-med) 40ms;
+}
+
+.work-card:hover .work-card__hover-meta {
+  transform: translateY(0);
+}
+
+.work-card__hover-location {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(238, 229, 213, 0.6);
+}
+
+.work-card__hover-year {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--burnt);
+}
+
+.work-card__hover-desc {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: rgba(238, 229, 213, 0.65);
+  margin-top: 0.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.work-card__hover-action {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--burnt);
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ============================================================
+   CAPTION FOOTER BELOW IMAGE
+   ============================================================ */
+
+.work-card__caption {
+  padding: 1rem 1.15rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: rgba(23, 17, 15, 0.96);
+  border-top: 1px solid rgba(238, 229, 213, 0.05);
+}
+
+.work-card__caption-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.work-card__caption-title {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ivory);
+  letter-spacing: 0.02em;
+}
+
+.work-card__caption-year {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--burnt);
+  letter-spacing: 0.1em;
+}
+
+.work-card__caption-location {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(238, 229, 213, 0.4);
+}
+
+/* Empty State */
+.work__empty {
+  grid-column: 1 / -1;
+  padding: var(--space-2xl);
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: rgba(238, 229, 213, 0.25);
+  font-style: italic;
+}
+
+/* ============================================================
+   RESPONSIVE LAYOUT
+   ============================================================ */
+
+@media (max-width: 1080px) {
+  .work__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .work__header {
+    padding: 0 var(--space-md) var(--space-lg);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 600px) {
+  .work__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 var(--space-md);
+  }
+}

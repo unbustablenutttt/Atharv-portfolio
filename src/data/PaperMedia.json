@@ -1,0 +1,43 @@
+{
+  "company": {
+    "name": "Paper Media",
+    "role": "Co-founder & Creative Director",
+    "tagline": "Where visual storytelling meets strategy, brand growth, and digital distribution.",
+    "description": "Paper Media is a social media management and digital marketing agency co-founded by Atharv Kamble. It serves as the professional ground where cinema-grade visual storytelling converges with algorithmic strategy — turning raw visual concepts into high-engagement brand campaigns, organic distribution engines, and distinctive digital identities.",
+    "website": "https://www.papermedia.co.in/",
+    "instagram": "https://www.instagram.com/paper.mediaa?stkn=eW55cnhkbzJmN2xn",
+    "stats": [
+      {
+        "value": "10M+",
+        "label": "Organic Views Generated"
+      },
+      {
+        "value": "25+",
+        "label": "Brand Campaigns Executed"
+      },
+      {
+        "value": "3.4×",
+        "label": "Average Engagement Uplift"
+      }
+    ],
+    "services": [
+      {
+        "title": "Social Media Management",
+        "description": "End-to-end channel governance, calendar architecture, brand voice positioning, and organic audience nurturing across platforms."
+      },
+      {
+        "title": "Video-First Content Strategy",
+        "description": "High-retention short-form reels, cinematic episodic drops, and narrative frameworks engineered for maximum algorithmic lift."
+      },
+      {
+        "title": "Creative Direction & Production",
+        "description": "Full-stack visual production from concept, lighting, and sound design to custom typography and editorial color grading."
+      },
+      {
+        "title": "Brand Identity & Distribution",
+        "description": "Translating commercial goals into measurable reach through multi-format distribution and strategic audience funnels."
+      }
+    ]
+  },
+  "projects": []
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <rect width="1600" height="900" fill="#17110F"/>
+  <defs>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1D3440" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#5A171B" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#C65A2E" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#gm)"/>
+  <g opacity="0.1" stroke="#EEE5D5" stroke-width="1" fill="none">
+    <line x1="0" y1="225" x2="1600" y2="225"/>
+    <line x1="0" y1="675" x2="1600" y2="675"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+  </g>
+  <g stroke="#C65A2E" stroke-width="1.5" opacity="0.5">
+    <line x1="0" y1="0" x2="50" y2="0"/><line x1="0" y1="0" x2="0" y2="50"/>
+    <line x1="1600" y1="0" x2="1550" y2="0"/><line x1="1600" y1="0" x2="1600" y2="50"/>
+    <line x1="0" y1="900" x2="50" y2="900"/><line x1="0" y1="900" x2="0" y2="850"/>
+    <line x1="1600" y1="900" x2="1550" y2="900"/><line x1="1600" y1="900" x2="1600" y2="850"/>
+  </g>
+  <!-- Play icon -->
+  <circle cx="800" cy="450" r="50" fill="none" stroke="#EEE5D5" stroke-width="1.5" opacity="0.3"/>
+  <polygon points="790,430 790,470 825,450" fill="#EEE5D5" opacity="0.3"/>
+  <text x="800" y="540" font-family="serif" font-size="14" fill="#EEE5D5" text-anchor="middle" opacity="0.3" letter-spacing="4">FILM / REEL</text>
+</svg>

@@ -1,0 +1,44 @@
+{
+  "name": "Atharv Kamble",
+  "initials": "AK",
+  "tagline": "Visual stories shaped by light, movement and place.",
+  "bio": "Working between observation, movement, computation, and brand architecture. Based in India — capturing still frames, directing films, engineering high-retention video edits, co-founding Paper Media, and investigating computational image systems in AI / ML.",
+  "email": "atharvk1687@gmail.com",
+  "location": "India",
+  "instagram": "https://www.instagram.com/haa_kyyy?stkn=MXRrcjZrODdpc2JrMA==",
+  "linkedin": "https://www.linkedin.com/in/atharv-kamble-091a35411?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  "pinterest": "https://pin.it/53kvVdMwd",
+  "year": 2026,
+  "arc": [
+    {
+      "step": "01",
+      "verb": "CAPTURE",
+      "discipline": "Photography",
+      "detail": "Medium format stills, architectural shadow, monsoon tones"
+    },
+    {
+      "step": "02",
+      "verb": "CREATE",
+      "discipline": "Videography",
+      "detail": "Atmospheric motion, documentary pacing, cinematic lighting"
+    },
+    {
+      "step": "03",
+      "verb": "EDIT",
+      "discipline": "Post-Production",
+      "detail": "Rhythm, sound design, precision color timing, narrative arc"
+    },
+    {
+      "step": "04",
+      "verb": "BUILD",
+      "discipline": "Paper Media",
+      "detail": "Brand presence, viral content strategy, social distribution"
+    },
+    {
+      "step": "05",
+      "verb": "UNDERSTAND",
+      "discipline": "AI / ML Research",
+      "detail": "Computer vision, generative models, pixel data theory"
+    }
+  ]
+}
